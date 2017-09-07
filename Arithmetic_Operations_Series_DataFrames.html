@@ -11775,7 +11775,7 @@ div#notebook {
 
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[167]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -11789,7 +11789,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[168]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">weather</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;pittsburgh2013_weather.csv&#39;</span><span class="p">,</span> <span class="n">index_col</span> <span class="o">=</span> <span class="s1">&#39;Date&#39;</span><span class="p">,</span> <span class="n">parse_dates</span><span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
@@ -11805,7 +11805,7 @@ div#notebook {
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[168]:</div>
+<div class="prompt output_prompt">Out[20]:</div>
 
 
 
@@ -11839,7 +11839,7 @@ Name: PrecipitationIn, dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[169]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">weather</span><span class="p">[</span><span class="s1">&#39;Precipitation_cm&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">weather</span><span class="p">[</span><span class="s1">&#39;PrecipitationIn&#39;</span><span class="p">]</span><span class="o">*</span><span class="mf">2.54</span>
@@ -11855,7 +11855,7 @@ Name: PrecipitationIn, dtype: float64</pre>
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[169]:</div>
+<div class="prompt output_prompt">Out[21]:</div>
 
 
 
@@ -11879,7 +11879,7 @@ Name: Precipitation_cm, dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[170]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">julyWk1Range</span> <span class="o">=</span> <span class="n">weather</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;2013-07-01&#39;</span><span class="p">:</span><span class="s1">&#39;2013-07-07&#39;</span><span class="p">,[</span><span class="s1">&#39;Min TemperatureF&#39;</span><span class="p">,</span><span class="s1">&#39;Max TemperatureF&#39;</span><span class="p">]]</span>
@@ -11895,11 +11895,24 @@ Name: Precipitation_cm, dtype: float64</pre>
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[170]:</div>
+<div class="prompt output_prompt">Out[22]:</div>
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -11962,7 +11975,7 @@ Name: Precipitation_cm, dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[171]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">julyWk1Mean</span> <span class="o">=</span> <span class="n">weather</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;2013-07-01&#39;</span><span class="p">:</span><span class="s1">&#39;2013-07-07&#39;</span><span class="p">,</span><span class="s1">&#39;Mean TemperatureF&#39;</span><span class="p">]</span>
@@ -11978,7 +11991,7 @@ Name: Precipitation_cm, dtype: float64</pre>
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[171]:</div>
+<div class="prompt output_prompt">Out[23]:</div>
 
 
 
@@ -12012,7 +12025,7 @@ Name: Mean TemperatureF, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[172]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">julyWk1Range</span><span class="o">/</span><span class="n">julyWk1Mean</span>
@@ -12030,18 +12043,31 @@ Name: Mean TemperatureF, dtype: int64</pre>
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>/opt/conda/lib/python3.5/site-packages/pandas/indexes/base.py:2482: RuntimeWarning: Cannot compare type &#39;Timestamp&#39; with type &#39;str&#39;, sort order is undefined for incomparable objects
+<pre>C:\Users\bala\Anaconda3\lib\site-packages\pandas\core\indexes\base.py:2984: RuntimeWarning: Cannot compare type &#39;Timestamp&#39; with type &#39;str&#39;, sort order is undefined for incomparable objects
   return this.join(other, how=how, return_indexers=return_indexers)
 </pre>
 </div>
 </div>
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[172]:</div>
+<div class="prompt output_prompt">Out[24]:</div>
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -12177,7 +12203,7 @@ Name: Mean TemperatureF, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[173]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">julyWk1Range</span><span class="o">.</span><span class="n">divide</span><span class="p">(</span><span class="n">julyWk1Mean</span><span class="p">,</span><span class="n">axis</span> <span class="o">=</span> <span class="s1">&#39;rows&#39;</span><span class="p">)</span>
@@ -12192,11 +12218,24 @@ Name: Mean TemperatureF, dtype: int64</pre>
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[173]:</div>
+<div class="prompt output_prompt">Out[25]:</div>
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -12270,7 +12309,7 @@ first week of july, we can call the pct_change() method on the series julyWk1Mea
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[174]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">julyWk1Mean</span><span class="o">.</span><span class="n">pct_change</span><span class="p">()</span><span class="o">*</span><span class="mi">100</span>
@@ -12285,7 +12324,7 @@ first week of july, we can call the pct_change() method on the series julyWk1Mea
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[174]:</div>
+<div class="prompt output_prompt">Out[26]:</div>
 
 
 
@@ -12319,7 +12358,7 @@ Name: Mean TemperatureF, dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[175]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">bronze</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;bronze_top5.csv&#39;</span><span class="p">,</span> <span class="n">index_col</span> <span class="o">=</span> <span class="mi">0</span> <span class="p">)</span>
@@ -12335,11 +12374,24 @@ Name: Mean TemperatureF, dtype: float64</pre>
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[175]:</div>
+<div class="prompt output_prompt">Out[27]:</div>
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -12385,7 +12437,7 @@ Name: Mean TemperatureF, dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[176]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">silver</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;silver_top5.csv&#39;</span><span class="p">,</span> <span class="n">index_col</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
@@ -12401,11 +12453,24 @@ Name: Mean TemperatureF, dtype: float64</pre>
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[176]:</div>
+<div class="prompt output_prompt">Out[28]:</div>
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -12451,7 +12516,7 @@ Name: Mean TemperatureF, dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[177]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">gold</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;gold_top5.csv&#39;</span><span class="p">,</span> <span class="n">index_col</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
@@ -12467,11 +12532,24 @@ Name: Mean TemperatureF, dtype: float64</pre>
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[177]:</div>
+<div class="prompt output_prompt">Out[29]:</div>
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -12528,7 +12606,7 @@ while silver has Italy, but not Germany</em></p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[178]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">bronze</span><span class="o">+</span><span class="n">silver</span>
@@ -12543,11 +12621,24 @@ while silver has Italy, but not Germany</em></p>
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[178]:</div>
+<div class="prompt output_prompt">Out[30]:</div>
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -12609,7 +12700,7 @@ the second parameter, the DataFrame which is missing that counry will be assigne
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[179]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">bronze</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">silver</span><span class="p">,</span> <span class="n">fill_value</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
@@ -12624,11 +12715,24 @@ the second parameter, the DataFrame which is missing that counry will be assigne
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[179]:</div>
+<div class="prompt output_prompt">Out[31]:</div>
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -12688,7 +12792,7 @@ the second parameter, the DataFrame which is missing that counry will be assigne
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[180]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">bronze</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">silver</span><span class="p">,</span> <span class="n">fill_value</span><span class="o">=</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">gold</span><span class="p">,</span> <span class="n">fill_value</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
@@ -12703,11 +12807,24 @@ the second parameter, the DataFrame which is missing that counry will be assigne
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[180]:</div>
+<div class="prompt output_prompt">Out[32]:</div>
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -12767,7 +12884,7 @@ the second parameter, the DataFrame which is missing that counry will be assigne
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[181]:</div>
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">fn</span> <span class="o">=</span> <span class="s1">&#39;gdp_usa.csv&#39;</span>
@@ -12784,11 +12901,24 @@ the second parameter, the DataFrame which is missing that counry will be assigne
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[181]:</div>
+<div class="prompt output_prompt">Out[33]:</div>
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -12834,7 +12964,7 @@ the second parameter, the DataFrame which is missing that counry will be assigne
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[182]:</div>
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">since2008</span> <span class="o">=</span> <span class="n">gdp</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;2008&#39;</span><span class="p">:,:]</span> <span class="c1">#slices all rows on or after 2008</span>
@@ -12850,11 +12980,24 @@ the second parameter, the DataFrame which is missing that counry will be assigne
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[182]:</div>
+<div class="prompt output_prompt">Out[34]:</div>
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -12900,7 +13043,7 @@ the second parameter, the DataFrame which is missing that counry will be assigne
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[183]:</div>
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">since2008Annual</span> <span class="o">=</span> <span class="n">since2008</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">last</span><span class="p">()</span>
@@ -12917,11 +13060,24 @@ the second parameter, the DataFrame which is missing that counry will be assigne
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[183]:</div>
+<div class="prompt output_prompt">Out[35]:</div>
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -13007,10 +13163,10 @@ to the .multiply function</b></em></p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[184]:</div>
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sp500</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;S&amp;PIndex.csv&#39;</span><span class="p">,</span> <span class="n">parse_dates</span><span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">usecols</span><span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;Date&#39;</span><span class="p">)</span>   
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sp500</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;s_and_p_index.csv&#39;</span><span class="p">,</span> <span class="n">parse_dates</span><span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">usecols</span><span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;Date&#39;</span><span class="p">)</span>   
 <span class="n">sp500</span><span class="o">.</span><span class="n">tail</span><span class="p">()</span>
 </pre></div>
 
@@ -13023,11 +13179,24 @@ to the .multiply function</b></em></p>
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[184]:</div>
+<div class="prompt output_prompt">Out[36]:</div>
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -13080,7 +13249,7 @@ to the .multiply function</b></em></p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[185]:</div>
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">exchange</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;exchangeRates.csv&#39;</span><span class="p">,</span><span class="n">index_col</span> <span class="o">=</span> <span class="s1">&#39;Date&#39;</span><span class="p">,</span> <span class="n">parse_dates</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">])</span>
@@ -13096,11 +13265,24 @@ to the .multiply function</b></em></p>
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[185]:</div>
+<div class="prompt output_prompt">Out[37]:</div>
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -13156,7 +13338,7 @@ to the .multiply function</b></em></p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[186]:</div>
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sp500_pounds</span> <span class="o">=</span> <span class="n">sp500</span><span class="o">.</span><span class="n">multiply</span><span class="p">(</span><span class="n">exchange</span><span class="p">[</span><span class="s1">&#39;GBP/USD&#39;</span><span class="p">],</span> <span class="n">axis</span> <span class="o">=</span> <span class="s1">&#39;rows&#39;</span><span class="p">)</span>
@@ -13172,11 +13354,24 @@ to the .multiply function</b></em></p>
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[186]:</div>
+<div class="prompt output_prompt">Out[38]:</div>
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -13229,7 +13424,7 @@ to the .multiply function</b></em></p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[187]:</div>
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sp500_pounds</span> <span class="o">=</span> <span class="n">sp500</span><span class="o">.</span><span class="n">multiply</span><span class="p">(</span><span class="n">exchange</span><span class="p">[</span><span class="s1">&#39;GBP/USD&#39;</span><span class="p">],</span> <span class="n">axis</span> <span class="o">=</span> <span class="s1">&#39;rows&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
@@ -13245,11 +13440,24 @@ to the .multiply function</b></em></p>
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[187]:</div>
+<div class="prompt output_prompt">Out[39]:</div>
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
